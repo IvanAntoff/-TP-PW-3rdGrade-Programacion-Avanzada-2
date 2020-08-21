@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+    </style>
+    <title>TP 1 - Prog. Avanzada</title>
+</head>
+<body>
+    <main>
+        <div>
+            <button onclick="FondoRojo()">Fondo Rojo</button>
+            <button onclick="FondoVerde()">Fondo Verde</button>
+            <button onclick="FondoAzul()">Fondo Azul</button>
+            <button onclick="FondoAmarillo()">Fondo Amarillo</button>    
+        </div>
+        <div>
+            <button onclick="CalcularArea()">
+                Calcular el area de un triangulo
+            </button>
+        </div>
+    </main>
+    <script language="javascript">
+        //Primer Ej.: Realice  una concatenaciónentre  dos  cadenas  literales  para  que  devuelva  su  edad  enun console.log( “” )
+        let Edad = 23;
+        let Mensaje = 'La edad es: '+Edad;
+        console.log('Ej 1:');
+        console.log(Mensaje);
+        //Segundo Ej: Utilicelos elementos de valores numéricospara: Sumar, Restar, Dividir, multiplicar, dividirdos números.
+        console.log('Ej 2:');
+        let Numero1 = 2;
+        let Numero2 = 22;
+        console.log("Suma:",Numero1+Numero2,"Resta:",Numero1-Numero2,"Division:",Numero2/Numero1,"Multiplo:",Numero1*Numero2);
+        //Tercer y cuerto Ej: Utilizando condicionales múltiples, realice un <script> que verifique la edad de Jubilaciónde una persona.
+        console.log('Ej 3 y 4:');
+        let Genero = 'M';
+        if (Genero === 'F' && Edad >= 60 ) {
+            console.log('Ested PUEDE jubilarse.');
+        } else if (Genero === 'M' && Edad >= 65 ) {
+            console.log('Ested PUEDE jubilarse.');
+        } else {
+            console.log('Ested NO puede jubilarse.');
+        }
+        //Desafio 2:
+        //Ej 1:  Modifique el ejemplo para que nuestra página tenga cuatro botones para cambiar el color de
+        //fondo, de forma que un botón nos de un fondo rojo, otro de fondo verde, azul y otro amarillo
+        document.bgColor = "black";
+
+        function FondoRojo() {
+            document.bgColor = "red";
+        } 
+
+        function FondoVerde() {
+            document.bgColor = "green";
+        } 
+
+        function FondoAzul() {
+            document.bgColor = "blue";
+        } 
+
+        function FondoAmarillo() {
+            document.bgColor = "yellow";
+        }
+
+        //Ej 2: Realice una función, que me permita calcular el área de un triangulo.
+        function CalcularArea() {
+            let Base = prompt('Ingrese el tamaño de la base: ')
+            let Altura = prompt('Ingrese el tamaño de la altura: ','')
+            return console.log('El area del triangulo es: ',(Base*(Altura/2)))
+        }
+
+        </script>
+</body>
+</html>
