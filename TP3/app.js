@@ -22,12 +22,28 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.render('main', {layout: 'index'});
+    res.render('home', {layout: 'main'});
+});
+
+app.get('/index.html', (req, res) => {
+    res.render('home', {layout: 'main'});
 });
 
 app.get('/portfolio.html', (req, res) => {
-    res.render('main', {layout: 'portfolio'});
+    res.render('home', {layout: 'portfolio'});
 });
+
+app.get('/blog.html', (req, res) =>{
+    res.render('home', {layout: 'blog'})
+})
+
+app.get('/about.html', (req, res) =>{
+    res.render('home', {layout: 'about'})
+})
+
+app.get('/contact.html', (req, res) =>{
+    res.render('home', {layout: 'contactus'})
+})
 
 app.listen(port, () => {
     console.log('The web server has started on port 3000');

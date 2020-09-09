@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="./assets/img/urku-ico.svg">
-    <link rel="stylesheet" href="./assets/css/aurora-pack.min.css">
-    <link rel="stylesheet" href="./assets/css/aurora-theme-base.min.css">
-    <link rel="stylesheet" href="./assets/css/urku.css">
-</head>
-    <title>TP3</title>
-</head>
+{{> head}}
 <body>
     {{> header }}
-
     <section class="ae-container-fluid rk-main">
         <input type="radio" name="layout-ctrl" checked id="layout-base" class="layout-ctrl-input">
         <div class="ae-container-fluid rk-layout-ctrl-cont">
@@ -45,7 +35,7 @@
             </svg>
         </div>
         {{> portofolio }}
-        {{> footer  }}
     </section>
+{{> footer  }}
 </body>
 </html>
