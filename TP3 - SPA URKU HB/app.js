@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const handlebars = require('express-handlebars');
 
@@ -46,5 +46,5 @@ app.get('/contact.html', (req, res) =>{
 })
 
 app.listen(port, () => {
-    console.log('The web server has started on port 3000');
+    console.log(`Our app is running on port ${ port }`);
 });

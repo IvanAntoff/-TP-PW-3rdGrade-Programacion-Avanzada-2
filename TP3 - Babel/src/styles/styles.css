@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  color: #3c484e;
+  background: #ffcc80 url(background.png);
+  background-size: 75px 75px;
+  background-repeat: space 0 0;
+  background-position: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+main {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  width: 90vw;
+  margin: 50px 50px;
+  align-self: center;
+  align-content: center;
+}
+
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card {
+  width: 20vw;
+  flex-basis: 20%;
+}
+
+.card-content {
+  width: 20vw;
+  flex-basis: 30%;
+}
+
+@media (orientation: portrait) {
+  main {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    width: 95vw;
+    align-self: center;
+    align-content: center;
+  }
+  
+  #movies {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .card {
+    width: 90vw;
+    flex-basis: 100%;
+  }
+  
+  .card-content {
+    width: 90vw;
+    flex-basis: 100%;
+  }
+}
